@@ -1,6 +1,6 @@
 # react-native-own
 
-如何自定义你自己的 React Native 组件
+如何设计你自己的 React Native 组件库
 
 
 ## 概述
@@ -28,6 +28,16 @@
 > 截图不定期更新，以最新代码为准。
 
 
+## 运行
+
+```shell
+$ git clone https://github.com/zhuanghongji/react-native-own.git
+$ cd react-native-own && yarn install
+$ react-native run-android
+$ react-native run-ios
+```
+
+
 ## 组件
 
 * SearchBar - 源码 - 如何使用 - 设计分析
@@ -39,6 +49,7 @@
 ..
 ├ android
 ├ ios
+├ docs                设计分析(自己的组件库)
 ├ screenshots         模拟器屏幕截图
 ├ src                 源代码
 |   assets            公共资源
@@ -51,7 +62,7 @@
 |     elements        react-native-elements
 |     nativebase      NativeBase
 |     own           
-|       components    自己写的组件库
+|       components    自己的组件库
 |       pages         示例页面
 |       OwnStack.js   单独的路由配置
 |   styles            公共样式
