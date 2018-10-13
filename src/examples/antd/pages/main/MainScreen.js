@@ -6,10 +6,17 @@ import {
   View,
 } from 'react-native';
 
+import sheets from '../../../../styles/sheets'
+
 export default class MainScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => ({
+    title: "Antd",
+  })
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={sheets.container}>
         <Text style={styles.welcome}>antd</Text>
       </View>
     );
@@ -17,12 +24,6 @@ export default class MainScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',

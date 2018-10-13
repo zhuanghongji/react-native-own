@@ -6,10 +6,17 @@ import {
   View,
 } from 'react-native';
 
+import sheets from '../../../../styles/sheets'
+
 export default class NativeBaseMainScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => ({
+    title: "NativeBase",
+  })
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={sheets.container}>
         <Text style={styles.welcome}>native-base</Text>
       </View>
     );

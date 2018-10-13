@@ -6,10 +6,17 @@ import {
   View,
 } from 'react-native';
 
+import sheets from '../../../../styles/sheets'
+
 export default class MainScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => ({
+    title: "Own",
+  })
+
   render() {
     return (
-      <View style={styles.container}>
+      <View style={sheets.container}>
         <Text style={styles.welcome}>own</Text>
       </View>
     );

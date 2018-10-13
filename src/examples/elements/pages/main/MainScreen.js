@@ -4,12 +4,21 @@ import {
   StyleSheet, 
   Text, 
   View,
+  Button,
 } from 'react-native';
 
+import sheets from '../../../../styles/sheets'
+
 export default class ElementsMainScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => ({
+    title: "Elements",
+  })
+
   render() {
+    let { navigation } = this.props
     return (
-      <View style={styles.container}>
+      <View style={sheets.container}>
         <Text style={styles.welcome}>elements</Text>
       </View>
     );
