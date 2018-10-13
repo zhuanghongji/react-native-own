@@ -40,8 +40,12 @@ export default colors = {
 
   primary: '#212121',
   minor: '#9e9e9e',
-  accent: 'grey',
+  accent: '#29b6f6',
   background: '#f5fCff',
+
+  black: '#000000',
+  white: '#ffffff',
+  black: '#00000000',
 
   header: '#212121',
   headerTint: '#ffffff',

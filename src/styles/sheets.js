@@ -10,4 +10,7 @@ export default StyleSheet.create({
     padding: 16,
     backgroundColor: '#F5FCFF',
   },
+  button: {
+    
+  }
 })

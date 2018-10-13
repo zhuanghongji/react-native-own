@@ -4,10 +4,10 @@ import {
   StyleSheet, 
   Text, 
   View,
-  Button,
 } from 'react-native';
 
 import sheets from '../../../../styles/sheets'
+import Button from '../../../../components/button/Button'
 
 export default class ElementsMainScreen extends Component {
 
@@ -19,7 +19,13 @@ export default class ElementsMainScreen extends Component {
     let { navigation } = this.props
     return (
       <View style={sheets.container}>
-        <Text style={styles.welcome}>elements</Text>
+        <Button
+          style={sheets.button}
+          title="Avatar"
+          onPress={() => {
+            navigation.navigate('Avatar')
+          }}
+        />
       </View>
     );
   }
