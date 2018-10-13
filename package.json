@@ -8,8 +8,13 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "antd-mobile-rn": "^2.2.1",
+    "beeshell": "^1.0.1",
+    "native-base": "^2.8.1",
     "react": "16.5.0",
-    "react-native": "0.57.0"
+    "react-native": "0.57.0",
+    "react-native-elements": "^1.0.0-beta7",
+    "react-navigation": "^2.18.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
