@@ -3,12 +3,14 @@ import {
 } from 'react-navigation'
 
 import MainScreen from './pages/main/MainScreen'
+import ButtonScreen from './pages/button/ButtonScreen'
+import TabScreen from './pages/tab/TabScreen'
 
 const BeeshellStack = createStackNavigator(
   {
-    Main: {
-      screen: MainScreen,
-    },
+    Main: MainScreen,
+    Button: ButtonScreen,
+    Tab: TabScreen,
   },
   {
     initialRouteName: 'Main',
