@@ -29,7 +29,7 @@ const components = [
   { name: 'Modal', desc: '基础弹窗' },
   { name: 'PageModal', desc: '上拉，包含标题以及取消、确认按钮' },
   { name: 'Radio', desc: '单选' },
-  { name: 'ScrollPicker', desc: '滚动选择' },
+  { name: 'Scrollpicker', desc: '滚动选择' },
   { name: 'SelectPanel', desc: '下拉选择组件' },
   { name: 'SilderModal', desc: '下拉/上拉' },
   { name: 'Tab', desc: '组件' },
