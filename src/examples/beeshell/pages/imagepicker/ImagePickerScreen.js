@@ -4,32 +4,73 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  Imagepicker,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
 
-export default class ImagePickerScreen extends Component {
+export default class ImagepickerScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('name')
   })
 
   render() {
+    const configs = {
+      title: '上传图片',
+      cancelButtonTitle: '取消',
+      takePhotoButtonTitle: '拍照',
+      chooseFromLibraryButtonTitle: '从图库上传',
+      maxWidth: 1600,
+      maxHeight: 1200,
+      isAllowCrop: true,
+      isAllowRotate: true,
+      aspectX: 4,
+      aspectY: 3,
+      quality: 1,
+
+      customButtons: {
+          delImage: {
+              title: '删除',
+              position: 'top',
+              brandColor: 'brandWarning',
+          },
+      },
+
+      responseFileType: 'base64',
+
+      callback(res) {
+          console.log(res);
+      },
+
+      onCustomButtonPress(btn) {
+          console.log(btn);
+      }
+    }
+    
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <View>
+          <TouchableOpacity
+            onPress={() => {
+                this._imagepicker.open();
+            }}
+          >
+            <Text>基础用法</Text>
+          </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
+          <Imagepicker
+            ref={(c) => {
+                this._imagepicker = c;
+            }}
+            {...configs}
+          >
+            </Imagepicker>
           </View>
-        </Button>
       </View>
     );
   }

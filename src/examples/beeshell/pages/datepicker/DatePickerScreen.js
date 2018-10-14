@@ -8,28 +8,33 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Datepicker,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
 
-export default class DatePickerScreen extends Component {
+export default class DatepickerScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('name')
   })
 
   render() {
+    const date = '2018-01-01';
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
+        <View style={{flex: 1, backgroundColor: '#ebebea'}}>
+          <View style={{marginVertical: 50}} >
+            <Datepicker
+              startYear={2010}
+              numberOfYears={10}
+              date={date}
+              onChange={(data) => {
+                  console.log(data);
+              }}
+            />
           </View>
-        </Button>
+      </View>
       </View>
     );
   }

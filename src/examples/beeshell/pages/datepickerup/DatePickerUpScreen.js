@@ -13,7 +13,7 @@ import {
 
 import sheets from '../../../../styles/sheets'
 
-export default class DatePickerUpScreen extends Component {
+export default class DatepickerUpScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('name')
@@ -22,14 +22,7 @@ export default class DatePickerUpScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Text>TBD</Text>
       </View>
     );
   }

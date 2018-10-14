@@ -6,15 +6,15 @@ import MainScreen from './pages/main/MainScreen'
 
 import ActionSheetScreen from './pages/actionsheet/ActionSheetScreen'
 import ButtonScreen from './pages/button/ButtonScreen'
-import CalenderScreen from './pages/calender/CalenderScreen'
+import CalendarScreen from './pages/calendar/CalendarScreen'
 import CascaderScreen from './pages/cascader/CascaderScreen'
 import CheckboxScreen from './pages/checkbox/CheckboxScreen'
 import ConfirmModalScreen from './pages/confirmmodal/ConfirmModalScreen'
-import DatePickerScreen from './pages/datepicker/DatePickerScreen'
-import DatePickerUpScreen from './pages/datepickerup/DatePickerUpScreen'
+import DatepickerScreen from './pages/datepicker/DatepickerScreen'
+import DatepickerUpScreen from './pages/datepickerup/DatepickerUpScreen'
 import FilterPanelScreen from './pages/filterpanel/FilterPanelScreen'
 import FormScreen from './pages/form/FormScreen'
-import ImagePickerScreen from './pages/imagepicker/ImagePickerScreen'
+import ImagepickerScreen from './pages/imagepicker/ImagepickerScreen'
 import InputScreen from './pages/input/InputScreen'
 import LongListScreen from './pages/longlist/LongListScreen'
 import ModalScreen from './pages/modal/ModalScreen'
@@ -31,15 +31,15 @@ const BeeshellStack = createStackNavigator(
     Main: MainScreen,
     ActionSheet: ActionSheetScreen,
     Button: ButtonScreen,
-    Calender: CalenderScreen,
+    Calendar: CalendarScreen,
     Cascader: CascaderScreen,
     Checkbox: CheckboxScreen,
     ConfirmModal: ConfirmModalScreen,
-    DatePicker: DatePickerScreen,
-    DatePickerUp: DatePickerUpScreen,
+    Datepicker: DatepickerScreen,
+    DatepickerUp: DatepickerUpScreen,
     FilterPanel: FilterPanelScreen,
     Form: FormScreen,
-    ImagePicker: ImagePickerScreen,
+    Imagepicker: ImagepickerScreen,
     Input: InputScreen,
     LongList: LongListScreen,
     Modal: ModalScreen,
