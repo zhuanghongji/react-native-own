@@ -8,10 +8,13 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Form,
+  Input,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
+
+const FormItem = Form.FormItem
 
 export default class FormScreen extends Component {
 
@@ -22,14 +25,16 @@ export default class FormScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        {/* <ScrollView> */}
+          <Form>
+            <FormItem prop="name" label="姓名" hasLine>
+              <Input value="" onChange={() => {}} />
+            </FormItem>
+            <FormItem prop="email" label="邮箱">      
+              <Input value="" onChange={() => {}} />
+            </FormItem>
+          </Form>
+        {/* </ScrollView> */}
       </View>
     );
   }

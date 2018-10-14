@@ -17,7 +17,7 @@ const components = [
   { name: 'Button', desc: '按钮' },
   { name: 'Calender', desc: '日历' },
   { name: 'Cascader', desc: '级联菜单' },
-  { name: 'CheckBox', desc: '多选' },
+  { name: 'Checkbox', desc: '多选' },
   { name: 'ConfirmModal', desc: '包含标题，取消、确认按钮' },
   { name: 'DatePicker', desc: '日期选择' },
   { name: 'DatePickerUp', desc: '日期数据源扩展' },

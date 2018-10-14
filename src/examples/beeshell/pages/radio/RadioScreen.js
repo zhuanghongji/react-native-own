@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Radio,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -19,17 +19,18 @@ export default class RadioScreen extends Component {
     title: navigation.getParam('name')
   })
 
+  state = {
+    deliveryTime: '3',
+  }
+
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Radio checkedValue={this.state.deliveryTime} onChange={() => {}}>
+          <Radio.Item key={'a'} label="百度" trueValue="1" />
+          <Radio.Item key={'b'} label="阿里" trueValue="2" />
+          <Radio.Item key={'c'} label="腾讯" trueValue="3" />
+        </Radio>
       </View>
     );
   }

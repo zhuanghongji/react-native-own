@@ -8,28 +8,29 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Checkbox,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
 
-export default class CheckBoxScreen extends Component {
+export default class CheckboxScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('name')
   })
 
+  state = {
+    deliveryTime: [],
+  }
+
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Checkbox checkedValues={this.state.deliveryTime} onChange={() => {}}>
+          <Checkbox.Item key={'a'} label="百度" trueValue="1" />
+          <Checkbox.Item key={'b'} label="阿里" trueValue="2" />
+          <Checkbox.Item key={'c'} label="腾讯" trueValue="3" />
+        </Checkbox>
       </View>
     );
   }

@@ -8,7 +8,7 @@ import ActionSheetScreen from './pages/actionsheet/ActionSheetScreen'
 import ButtonScreen from './pages/button/ButtonScreen'
 import CalenderScreen from './pages/calender/CalenderScreen'
 import CascaderScreen from './pages/cascader/CascaderScreen'
-import CheckBoxScreen from './pages/checkbox/CheckBoxScreen'
+import CheckboxScreen from './pages/checkbox/CheckboxScreen'
 import ConfirmModalScreen from './pages/confirmmodal/ConfirmModalScreen'
 import DatePickerScreen from './pages/datepicker/DatePickerScreen'
 import DatePickerUpScreen from './pages/datepickerup/DatePickerUpScreen'
@@ -33,7 +33,7 @@ const BeeshellStack = createStackNavigator(
     Button: ButtonScreen,
     Calender: CalenderScreen,
     Cascader: CascaderScreen,
-    CheckBox: CheckBoxScreen,
+    Checkbox: CheckboxScreen,
     ConfirmModal: ConfirmModalScreen,
     DatePicker: DatePickerScreen,
     DatePickerUp: DatePickerUpScreen,

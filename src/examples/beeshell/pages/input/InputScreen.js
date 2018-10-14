@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Input,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -19,17 +19,19 @@ export default class InputScreen extends Component {
     title: navigation.getParam('name')
   })
 
+  state = {
+    name: ''
+  }
+
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Input
+          placeholder="请输入姓名"
+          textAlign="left"
+          value={this.state.name}
+          onChange={() => {}}
+        />
       </View>
     );
   }
