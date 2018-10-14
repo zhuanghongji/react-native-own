@@ -2,10 +2,11 @@ import {
   createStackNavigator,
 } from 'react-navigation'
 
+import colors from '../../styles/colors'
+
 import MainScreen from './pages/main/MainScreen'
 import AvatarScreen from './pages/avatar/AvatarScreen'
-
-import colors from '../../styles/colors'
+import BadgeScreen from './pages/badge/BadgeScreen'
 
 const ElementsStack = createStackNavigator(
   {
@@ -14,6 +15,9 @@ const ElementsStack = createStackNavigator(
     },
     Avatar: {
       screen: AvatarScreen,
+    },
+    Badge: {
+      screen: BadgeScreen,
     },
   },
   {

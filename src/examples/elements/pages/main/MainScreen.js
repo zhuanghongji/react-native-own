@@ -19,6 +19,7 @@ export default class ElementsMainScreen extends Component {
     let { navigation } = this.props
     return (
       <View style={sheets.container}>
+
         <Button
           style={sheets.button}
           title="Avatar"
@@ -26,6 +27,15 @@ export default class ElementsMainScreen extends Component {
             navigation.navigate('Avatar')
           }}
         />
+
+        <Button
+          style={sheets.button}
+          title="Badge"
+          onPress={() => {
+            navigation.navigate('Badge')
+          }}
+        />
+
       </View>
     );
   }
