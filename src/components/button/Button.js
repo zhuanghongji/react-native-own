@@ -20,29 +20,38 @@ export default class Button extends Component {
   static propTypes = {
     style: PropTypes.object,
     title: PropTypes.string,
+    desc: PropTypes.string,
     onPress: PropTypes.func,
   }
 
   static defaultProps = {
     title: 'Button',
+    desc: '',
     onPress: undefined,
   }
 
   render() {
-    let { style, title, onPress } = this.props
+    let { style, title, desc, onPress } = this.props
     return (
-      <TouchableOpacity 
-        style={[styles.touchable, (style ? style : null)]}
-        activeOpacity={0.6}
-        onPress={onPress}
-      >
-        <Text style={styles.text}>{title}</Text>
-      </TouchableOpacity>
+      <View style={[styles.container, (style ? style : null)]}>
+        <TouchableOpacity 
+          style={styles.touchable}
+          activeOpacity={0.6}
+          onPress={onPress}
+        >
+          <Text style={styles.text}>{title}</Text>
+        </TouchableOpacity>
+        <Text style={styles.desc}>{desc}</Text>
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   touchable: {
     alignSelf: 'flex-start',
     padding: 8,
@@ -52,6 +61,11 @@ const styles = StyleSheet.create({
   text: {
     color: colors.white,
     fontSize: 18,
+  },
+  desc: {
+    color: colors.grey500,
+    fontSize: 16,
+    marginLeft: 16,
   }
 })
 
