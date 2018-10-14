@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Longlist,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -19,17 +19,47 @@ export default class LongListScreen extends Component {
     title: navigation.getParam('name')
   })
 
+  componentDidMount() {
+    this.refreshState(1);
+  }
+
+  refreshState = (pageNo) => {
+    const params = {
+        pageNo: pageNo || 1,
+        pagesize: this.state.pagesize,
+        id: '123456',
+    };
+
+    return this.getList(params).then((resData) => {
+        const { data } = resData;
+
+        const list = data.map((item) => {
+            return {
+                ...item,
+                label: `${item.label}--pageNo: ${params.pageNo}`,
+            };
+        });
+
+        this.setState({
+            list: (pageNo == 1 ? [] : this.state.list).concat(list),
+        });
+    });
+  }
+
+
   render() {
+    const { list } = this.state;
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Longlist
+          data={list}
+          renderItem={({item, index}) => {
+              return (<Text>{item.label}</Text>);
+          }}
+          hasRefreshControl={true}
+          onEndReached={this.refreshState}
+          onRefresh={this.refreshState}
+        />
       </View>
     );
   }

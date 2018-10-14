@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  FilterPanel,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -22,14 +22,7 @@ export default class FilterPanelScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
-
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Text>TBD</Text>
       </View>
     );
   }
