@@ -1,15 +1,11 @@
 
 import React, {Component} from 'react';
 import {
-  StyleSheet, 
-  Text, 
   View,
-  Image,
-  TouchableNative,
 } from 'react-native';
 
 import {
-  Button,
+  Text,
 } from 'react-native-elements'
 
 import sheets from '../../../../styles/sheets'
@@ -23,9 +19,10 @@ export default class TextScreen extends Component {
   render() {
     return (
       <View style={sheets.container}>
-
-
-      
+        <Text h1>Heading 1</Text>
+        <Text h2>Heading 2</Text>
+        <Text h3>Heading 3</Text>
+        <Text h4>Heading 4</Text>
       </View>
     );
   }

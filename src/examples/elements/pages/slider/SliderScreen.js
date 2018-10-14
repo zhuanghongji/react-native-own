@@ -1,15 +1,12 @@
 
 import React, {Component} from 'react';
 import {
-  StyleSheet, 
   Text, 
   View,
-  Image,
-  TouchableNative,
 } from 'react-native';
 
 import {
-  Button,
+  Slider,
 } from 'react-native-elements'
 
 import sheets from '../../../../styles/sheets'
@@ -20,12 +17,19 @@ export default class SliderScreen extends Component {
     title: navigation.getParam('name')
   })
 
+  state = {
+    value: 36,
+  }
+
   render() {
     return (
       <View style={sheets.container}>
-
-
-      
+        <View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
+          <Slider
+            value={this.state.value}
+            onValueChange={(value) => this.setState({value})} />
+          <Text>Value: {this.state.value}</Text>
+        </View>
       </View>
     );
   }

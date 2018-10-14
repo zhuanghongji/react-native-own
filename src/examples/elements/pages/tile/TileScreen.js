@@ -1,15 +1,12 @@
 
 import React, {Component} from 'react';
 import {
-  StyleSheet, 
-  Text, 
   View,
-  Image,
-  TouchableNative,
 } from 'react-native';
 
 import {
-  Button,
+  Tile,
+  Text,
 } from 'react-native-elements'
 
 import sheets from '../../../../styles/sheets'
@@ -23,9 +20,19 @@ export default class TileScreen extends Component {
   render() {
     return (
       <View style={sheets.container}>
-
-
-      
+        <Tile
+          imageSrc={require('../../res/path.png')}
+          title="Lorem ipsum dolor sit amet, consectetur"
+          icon={{ name: 'play-circle', type: 'font-awesome' }} 
+          contentContainerStyle={{ height: 70 }}
+        >
+          <View
+            style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}
+          >
+            <Text>Caption</Text>
+            <Text>Caption</Text>
+          </View>
+        </Tile>
       </View>
     );
   }
