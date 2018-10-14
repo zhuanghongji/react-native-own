@@ -4,16 +4,16 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  ConfirmModal,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
 
-export default class ConfirmScreen extends Component {
+export default class ConfirmModalScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('name')
@@ -22,14 +22,25 @@ export default class ConfirmScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <TouchableOpacity
+          onPress={() => {
+            this._confirmModal.open();
+          }}>
+          <Text>包含标题，确认、取消按钮</Text>
+        </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <ConfirmModal
+          ref={(c) => { this._confirmModal = c; }}
+          title="是否退出编辑？"
+          body="只提供简单文案"
+          cancelable={false}
+          cancelCallback={() => {
+            console.log('cancel');
+          }}
+          confirmCallback={() => {
+            console.log('confirm');
+          }}>
+        </ConfirmModal>
       </View>
     );
   }

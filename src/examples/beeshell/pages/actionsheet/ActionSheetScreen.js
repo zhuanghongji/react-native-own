@@ -4,11 +4,11 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  Actionsheet,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -22,14 +22,30 @@ export default class ActionSheetScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <TouchableOpacity
+          onPress={() => {
+            this._actionSheet.open();
+          }}>
+          <Text>Actionsheet</Text>
+        </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Actionsheet
+          ref={(c) => { this._actionSheet = c; }}
+          title="选择品类"
+          textKey="text"
+          options={[
+            { text: '选项1', value: '1' },
+            { text: '选项2', value: '2',},
+            { text: '选项3', value: '3' },
+          ]}
+          cancelable={false}
+          confirmCallback={(item) => {
+              console.log('confirm');
+          }}
+          cancelCallback={() => {
+              console.log('cancel')
+          }}>
+        </Actionsheet>
       </View>
     );
   }

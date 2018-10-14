@@ -4,11 +4,11 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  Tip,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -22,14 +22,18 @@ export default class TipScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <TouchableOpacity
+          onPress={() => {
+            this._tip.open();
+          }}>
+          <Text>基础用法</Text>
+        </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <Tip
+          ref={(c) => { this._tip = c; }}
+          cancelable={true}
+          body="默认文案"
+        />
       </View>
     );
   }

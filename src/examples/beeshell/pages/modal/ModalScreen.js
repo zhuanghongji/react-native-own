@@ -4,11 +4,11 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  Modal,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -22,14 +22,25 @@ export default class ModalScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <TouchableOpacity
+          onPress={() => {
+            this._modal.open();
+          }}>
+          <Text>基础用法</Text>
+        </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
+        <Modal
+          ref={(c) => { this._modal = c; }}
+          cancelable={true}
+        >
           <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
+            <Text>ref 获取组件实例</Text>
+            <Text>
+              cancelable={'{'}true{'}'}
+              点击蒙层消失
+            </Text>
           </View>
-        </Button>
+        </Modal>
       </View>
     );
   }

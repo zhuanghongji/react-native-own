@@ -22,7 +22,7 @@ import PageModalScreen from './pages/pagemodal/PageModalScreen'
 import RadioScreen from './pages/radio/RadioScreen'
 import ScrollpickerScreen from './pages/scrollpicker/ScrollpickerScreen'
 import SelectPanelScreen from './pages/selectpanel/SelectPanelScreen'
-import SilderModalScreen from './pages/slidermodal/SilderModalScreen'
+import SlideModalScreen from './pages/slidemodal/SlideModalScreen'
 import TabScreen from './pages/tab/TabScreen'
 import TipScreen from './pages/tip/TipScreen'
 
@@ -47,7 +47,7 @@ const BeeshellStack = createStackNavigator(
     Radio: RadioScreen,
     Scrollpicker: ScrollpickerScreen,
     SelectPanel: SelectPanelScreen,
-    SilderModal: SilderModalScreen,
+    SlideModal: SlideModalScreen,
     Tab: TabScreen,
     Tip: TipScreen,
   },

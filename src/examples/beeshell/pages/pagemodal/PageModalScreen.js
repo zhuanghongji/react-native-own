@@ -4,11 +4,11 @@ import {
   StyleSheet, 
   Text, 
   View,
-  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
-  Button,
+  PageModal,
 } from 'beeshell'
 
 import sheets from '../../../../styles/sheets'
@@ -22,14 +22,33 @@ export default class PageModalScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Button type="primary" size="md" responsive={false}>首选项 primary</Button>
+        <TouchableOpacity
+          onPress={() => {
+            this._pageModal.open();
+          }}>
+          <Text>带头部的底部上拉</Text>
+        </TouchableOpacity>
 
-        <Button type="primary" size="md" responsive={false}>
-          <View>
-            <Text>自定义</Text>
-            <Text>支持组件</Text>
-          </View>
-        </Button>
+        <PageModal
+          ref={(c) => { this._pageModal = c; }}
+          title="选择品类"
+          cancelable={true}
+          cancelCallback={() => {
+          }}
+          confirmCallback={() => {
+          }}>
+
+          <Text>ref 获取组件实例</Text>
+          <Text>title="标题"</Text>
+          <Text>
+            cancelCallback={'{'}() => {'{'}{'}'} {'}'}
+            '取消'回调
+          </Text>
+          <Text>
+            confirmCallback={'{'}() => {'{'}{'}'} {'}'}
+            '确认'回调
+          </Text>
+        </PageModal>
       </View>
     );
   }

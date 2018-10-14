@@ -31,7 +31,7 @@ const components = [
   { name: 'Radio', desc: '单选' },
   { name: 'Scrollpicker', desc: '滚动选择' },
   { name: 'SelectPanel', desc: '下拉选择组件' },
-  { name: 'SilderModal', desc: '下拉/上拉' },
+  { name: 'SlideModal', desc: '下拉/上拉' },
   { name: 'Tab', desc: '组件' },
   { name: 'Tip', desc: '提示信息弹窗' },
 ]
