@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import {
-  Button,
+  Divider,
 } from 'react-native-elements'
 
 import sheets from '../../../../styles/sheets'
@@ -24,7 +24,7 @@ export default class DividerScreen extends Component {
     return (
       <View style={sheets.container}>
 
-
+        <Divider style={{ width: 256, height: 12, backgroundColor: 'blue' }} />
       
       </View>
     );

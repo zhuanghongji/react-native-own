@@ -91,14 +91,55 @@ export default class AvatarScreen extends Component {
     )
   }
 
+  renderIcons() {
+    return (
+      <ScrollView
+        style={styles.scrollViewHorizontal}
+        horizontal={true}
+      >
+        <Avatar
+          small
+          rounded
+          icon={{name: 'user', type: 'font-awesome'}}
+          onPress={() => console.log("Works!")}
+          activeOpacity={0.7}
+          containerStyle={{flex: 2, marginLeft: 20, marginTop: 115}}
+        />
+        <Avatar
+          medium
+          overlayContainerStyle={{backgroundColor: 'blue'}}
+          icon={{name: 'meetup', color: 'red', type: 'font-awesome'}}
+          onPress={() => console.log("Works!")}
+          activeOpacity={0.7}
+          containerStyle={{flex: 3, marginTop: 100}}
+        />
+        <Avatar
+          large
+          icon={{name: 'rocket', color: 'orange', type: 'font-awesome'}}
+          overlayContainerStyle={{backgroundColor: 'white'}}
+          onPress={() => console.log("Works!")}
+          activeOpacity={0.7}
+          containerStyle={{flex: 4, marginTop: 75}}
+        />
+        <Avatar
+          xlarge
+          rounded
+          icon={{name: 'home', type: 'font-awesome'}}
+          onPress={() => console.log("Works!")}
+          activeOpacity={0.7}
+          containerStyle={{flex: 5, marginRight: 60}}
+        />
+      </ScrollView>
+    )
+  }
+
   render() {
     return (
       <View style={sheets.container}>
-        <ScrollView
-          style={sheets.scrollView}
-        >
+        <ScrollView style={sheets.scrollView} >
           {this.renderSources()}
           {this.renderTitles()}
+          {this.renderIcons()}
         </ScrollView>
       </View>
     );
