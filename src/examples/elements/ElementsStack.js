@@ -5,20 +5,17 @@ import {
 import colors from '../../styles/colors'
 
 import MainScreen from './pages/main/MainScreen'
+
 import AvatarScreen from './pages/avatar/AvatarScreen'
 import BadgeScreen from './pages/badge/BadgeScreen'
+import ButtonScreen from './pages/button/ButtonScreen'
 
 const ElementsStack = createStackNavigator(
   {
-    Main: {
-      screen: MainScreen,
-    },
-    Avatar: {
-      screen: AvatarScreen,
-    },
-    Badge: {
-      screen: BadgeScreen,
-    },
+    Main: MainScreen,
+    Avatar: AvatarScreen,
+    Badge: BadgeScreen,
+    Button: ButtonScreen,
   },
   {
     initialRouteName: 'Main',

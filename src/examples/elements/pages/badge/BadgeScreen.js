@@ -17,7 +17,7 @@ import sheets from '../../../../styles/sheets'
 export default class BadgeScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
-    title: "Badge",
+    title: navigation.getParam('name')
   })
 
   render() {

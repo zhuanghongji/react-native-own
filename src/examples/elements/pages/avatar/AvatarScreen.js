@@ -11,10 +11,12 @@ import {
   Avatar,
 } from 'react-native-elements'
 
+import sheets from '../../../../styles/sheets'
+
 export default class AvatarScreen extends Component {
 
   static navigationOptions = ({ navigation }) => ({
-    title: "Avatar",
+    title: navigation.getParam('name')
   })
 
   renderSources() {
@@ -91,9 +93,9 @@ export default class AvatarScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={sheets.container}>
         <ScrollView
-          style={styles.scrollView}
+          style={sheets.scrollView}
         >
           {this.renderSources()}
           {this.renderTitles()}

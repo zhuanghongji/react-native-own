@@ -1,16 +1,21 @@
 import {
   StyleSheet,
+  Dimensions,
 } from 'react-native'
+
+const { 
+  width: screenWidth, 
+  height: screenHeight,
+} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    padding: 16,
     backgroundColor: '#F5FCFF',
   },
-  button: {
-    
-  }
+  scrollView: {
+    flex: 1,
+  },
 })

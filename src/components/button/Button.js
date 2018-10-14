@@ -18,6 +18,7 @@ import colors from '../../styles/colors'
 export default class Button extends Component {
 
   static propTypes = {
+    style: PropTypes.object,
     title: PropTypes.string,
     onPress: PropTypes.func,
   }
@@ -28,10 +29,10 @@ export default class Button extends Component {
   }
 
   render() {
-    let { title, onPress } = this.props
+    let { style, title, onPress } = this.props
     return (
       <TouchableOpacity 
-        style={styles.touchable}
+        style={[styles.touchable, (style ? style : null)]}
         activeOpacity={0.6}
         onPress={onPress}
       >
@@ -43,8 +44,8 @@ export default class Button extends Component {
 
 const styles = StyleSheet.create({
   touchable: {
+    alignSelf: 'flex-start',
     padding: 8,
-    margin: 4,
     borderRadius: 4,
     backgroundColor: colors.accent,
   },
